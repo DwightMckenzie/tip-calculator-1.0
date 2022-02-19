@@ -1,0 +1,122 @@
+:root {
+    --bg-color: #222;
+    --primary-color: rgb(102, 75, 0);
+    --primary-hvr-color: rgba(102, 75, 0, 0.60);
+}
+
+html {
+    box-sizing: content-box;
+}
+body {
+    font-family: Poppins, sans-serif;
+	background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+/* global elements
+===============================================*/
+hr {
+    margin-top: 0px;
+    border: 1px solid var(--primary-color);
+}
+.container h2 {
+    text-align: center;
+}
+h3 {
+    margin: 15px 0;
+    color: var(--primary-color);
+    font-size: 25px;
+}
+.container>div>p {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+input[type=text],
+select {
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-color);
+    font-size: 25px;
+    color: var(--primary-color);
+}
+input[type=text]:focus, select:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px var(--primary-color);
+}
+input[type=text] {
+    width: 90%;
+    height: 40px;
+    text-align: end;
+    padding: 0 5px;
+}
+select {
+    height: 42px;
+    padding: 5px 15px;
+    font-size: 25px;
+}
+button {
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-left: 36%;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: var(--bg-color);
+}
+button:hover {
+    background-color: var(--primary-hvr-color);
+}
+button:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px var(--primary-color);
+}
+button:active {
+    background-color: var(--primary-hvr-color);
+}
+
+::placeholder {
+    color: var(--primary-color);
+    opacity: 0.3;
+}
+
+/* form
+===============================================*/
+.calc-bdy {
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: auto;
+    background-color: #222;
+    border: 1px solid var(--primary-color);
+}
+.calc-bdy>div:not(:last-child) {
+    margin-bottom: 30px;
+}
+.calc-bdy>div:nth-child(1) {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    display: flex;
+}
+.calc-bdy>div:nth-child(1) div:first-child {
+    width: 70%;
+    height: auto;
+}
+.calc-bdy div h3 {
+    text-align: center;
+}
+.rcpt-tbl {
+    width: 100%;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.rcpt-tbl .itm {
+    font-weight: 600;
+}
+.rcpt-tbl .info {
+    text-align: right;
+}
