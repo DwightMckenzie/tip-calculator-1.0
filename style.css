@@ -4,14 +4,16 @@
     --primary-color-hvr: rgba(255, 187, 0, 0.5);
     --tggle-color: rgba(255, 187, 0, 0.2);
 }
+
 html {
     box-sizing: content-box;
 }
 body {
     font-family: Poppins, sans-serif;
-    background-color: var(--bg-color);
+	background-color: var(--bg-color);
     color: var(--primary-color);
 }
+
 /* global elements
 ===============================================*/
 hr {
@@ -136,17 +138,20 @@ button:active {
 .tggle-wrppr>div:last-child {
     margin: 0 0 0 15px;
 }
+
 .switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
 }
+
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -159,6 +164,7 @@ button:active {
     -webkit-transition: .4s;
     transition: .4s;
 }
+
 .slider:before {
     position: absolute;
     content: "";
@@ -170,20 +176,26 @@ button:active {
     -webkit-transition: .4s;
     transition: .4s;
 }
+
+/* toggle cavity color indciator */
 input:checked+.slider {
     background-color: var(--tggle-color);
 }
+
 input:focus+.slider {
     box-shadow: 0 0 1px var(--tggle-color);
 }
+
 input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
+
 .slider.round {
     border-radius: 34px;
 }
+
 .slider.round:before {
     border-radius: 50%;
 }
