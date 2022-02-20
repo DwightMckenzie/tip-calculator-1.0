@@ -4,7 +4,26 @@ const tipPrc = document.getElementById('tip-perc');
 const calcBtn = document.getElementById('calc');
 const rcpt = document.getElementById('rcpt-wrppr');
 const total = document.getElementById('reciept');
+const tggle = document.getElementById('tggle');
 
+// toggle color scheme
+tggle.addEventListener('change', function(e){
+
+  if (e.target.checked === true) {
+    document.documentElement.style.setProperty('--bg-color', '#efefef');
+    document.documentElement.style.setProperty('--primary-color', '#555');
+    document.documentElement.style.setProperty('--primary-color-hvr', 'rgba(85, 85, 85, 0.5)');
+    document.documentElement.style.setProperty('--tggle-color', 'rgba(85, 85, 85, 0.2)');
+  } else {
+    document.documentElement.style.setProperty('--bg-color', '#222');
+    document.documentElement.style.setProperty('--primary-color', '#ffbb00');
+    document.documentElement.style.setProperty('--primary-color-hvr', 'rgba(255, 187, 0, 0.5)');
+    document.documentElement.style.setProperty('--tggle-color', 'rgba(255, 187, 0, 0.2)');
+  }
+
+});
+
+// create and show recipet
 calcBtn.addEventListener('click', function(){
   const dte = new Date();
   let mnth = dte.getMonth() + 1;
